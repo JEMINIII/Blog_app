@@ -1,9 +1,12 @@
-import { db } from "../db.js";
-import bcrypt from "bcryptjs";
+import bcrypt from 'bcryptjs';
+
+import { db } from '../db.js';
+
 // import jwt from "jsonwebtoken";
 
 export const register = (req, res) => {
   //CHECK EXISTING USER
+  console.log("hit");
   const q = "SELECT * FROM users WHERE email = ? OR username = ?";
   console.log(q)
   db.query(q, [req.body.email, req.body.username], (err, data) => {

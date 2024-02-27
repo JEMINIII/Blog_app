@@ -1,5 +1,7 @@
-import express from "express"
-import { addPost } from "../controllers/post.js"
+import express from 'express';
+
+import { addPost } from '../controllers/post.js';
+
 const router = express.Router()
 
 // router.get("/test",(req,res)=>{
